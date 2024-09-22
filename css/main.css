@@ -1,0 +1,397 @@
+body{
+    width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+        "header-cell"
+        "nav-cell"
+        "main-cell"
+        "footer-cell";
+}
+
+.radial {
+    background: radial-gradient(rgb(121, 246, 121), ghostwhite);
+}
+/*bai tap 1*/
+main p {
+    text-align: justify;
+    margin: 0;
+}
+header {
+    position: relative;
+    background-image: url(../TH_B2_Data/header.png);
+    height: 100px;
+}
+
+#headerlogo {
+    height: 36px;
+}
+
+header {
+    grid-area: header-cell;
+}
+
+nav {
+    grid-area: nav-cell;
+}
+
+main {
+    grid-area: main-cell;
+    display: grid;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0 5px;
+    background-color: #fff;
+}
+
+footer {
+    grid-area: footer-cell;
+}
+
+/*hieu ung*/
+#header-img1 {
+    position: absolute;
+    height: 100px;
+    top: -30px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; /*khi ket thuc animation hinh anh se o vi tri moi*/
+    animation-name: effect1;
+}
+
+@keyframes effect1 { /* hieu ung effect1 tu phai sang trai*/
+    from {
+        left: 80%; 
+    }
+    to {
+        left: 30%;
+    }
+}
+
+#header-img2 {
+    position: absolute;
+    height: 70px;
+    top: -5px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: effect2;
+}
+
+@keyframes effect2 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 45%;
+    }
+}
+
+#header-img3 {
+    position: absolute;
+    height: 80px;
+    top: 0px;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-name: effect3;
+}
+
+@keyframes effect3 {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 63%;
+    }
+}
+
+/*bai tap 2*/
+nav{
+    margin-top: 20px;
+}
+nav a {
+    float: left;
+    margin-left: 3px;
+    border: 1px solid white;
+    padding: 2px 4px;
+    height: 20px;
+    text-align: center;
+    color: #ed4190;
+    font-size: 17px;
+    background-color: #ffff80;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #ed4190;
+}
+
+#search-bar {
+    float: right; /* canh le phai */
+    padding: 3px;
+    
+}
+
+.fa-magnifying-glass { /*chinh kinh lup & gio hang */
+    text-align: center; /*can cho 2 icon nam giua */
+    padding: 4px;
+    color: white;
+    min-width: 25px;
+    border: none;
+    background-color: #cddc39;
+    cursor: pointer; /* khi re chuot vao se doi thanh con tro*/
+    line-height: 14px;
+}
+
+.fa-cart-shopping, .fa-location-dot {
+    text-align: center;
+    padding: 4px;
+    color: #ed4190;
+    min-width: 30px;
+    border: none;
+    background-color: #cddc39;
+    cursor: pointer;
+    line-height: 14px;
+}
+
+/*bai tap 3*/
+footer {
+    margin-top: 2px;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    padding: 0px 5px;
+    text-align: center;
+}
+
+#footer1, #footer2, #footer3{
+    color: #ed4195
+}
+
+#top {
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+    background-color: transparent;
+}
+#top img{
+    z-index: 100px;
+    width: 45px;
+    height: 45px;
+}
+
+/*bai tap 4*/
+/*Trang chu*/
+h1 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f9086d;
+}
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #f9086d
+}
+
+h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #f9086d
+}
+
+.loai1 {
+    display: flex;
+    gap: 1%; /*khoang cach giua hinhanh va text*/
+}
+.text1, .text2 {
+    margin-top: 0;
+    text-align: justify;
+}
+.hinhanh1, .hinhanh2{
+    height: 170px;
+    width: auto;
+}
+.loai1 .hinhanh1 {
+    width: 30%;
+}
+
+.loai1 .text1 {
+    width: 69%;
+}
+
+.loai2 {
+    display: flex;
+    gap: 1%; /*khoang cach giua hinhanh va text*/
+}
+
+.loai2 .text2 {
+    width: 69%;
+}
+
+.loai2 .hinhanh2 {
+    width: 30%;
+}
+
+.text1 .text2 {
+    margin-bottom: 5px;
+    padding: 0 5px;
+    color: #000;
+}
+
+#chiacot {
+    column-count: 2;
+    column-gap: 1%; /*khoang cach giua 2cot*/
+}
+
+.break {
+    break-before: column;
+}
+
+#temp{
+    display: flex;
+    margin-bottom: 5px;
+    width: 103%;
+    height: 150px;
+    text-align: center;
+}
+.thaotac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ed4190;
+    border-radius: 5px;
+    width: 24%;
+    padding-top: 5px ;
+}
+
+section {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+section h2 {
+    text-align: center;
+    color:#ed4190;
+}
+
+/*San pham*/
+.sanpham {
+    height: 390px;
+    display: inline-block;
+    border: 1px solid #dbd7d9;
+    color: #000;
+    width: 32.8%;
+    text-align: center;
+}
+
+span {
+    display: block;
+    background: linear-gradient(to bottom, ghostwhite 10%, #cddc39 90%);
+    text-align: center;
+}
+
+/*Gioi thieu*/
+#gioithieu {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content aside-right";
+    gap: 15px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.aside-right {
+    grid-area: aside-right;
+}
+
+/*Tin tuc*/
+#tintuc {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "aside-left noidung";
+    gap: 10px;
+}
+
+.noidung {
+    grid-area: noidung;
+}
+
+.aside-left {
+    grid-area: aside-left;
+}
+
+.main-tintuc {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3px;
+}
+
+.img-tintuc {
+    flex-basis: 25%;
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.text-tintuc {
+    flex-basis: 75%;
+}
+
+.img-tintuc1 {
+    border-radius: 5px;
+}
+
+/*Dang nhap*/
+.login, .sign-up, .lienhe {
+    margin-top: 50px;
+    border: 1px solid #dbd7d9;
+}
+
+.main-login, .main-sign-up, .main-gopy{
+    margin-left: 300px;
+}
+
+.fa-envelope, .fa-key , .fa-id-badge, .fa-users, .fa-note-sticky, .fa-bars, .fa-user{
+    text-align: center; 
+    padding: 4px;
+    color: white;
+    min-width: 25px;
+    border: none;
+    background-color: #cddc39;
+    line-height: 14px;
+    margin-bottom: 5px;
+}
+
+/*Dang ky*/
+.gopy {
+    display: inline-block;
+}
+
+hr {
+    width: 200px;
+    margin-top: 0px;
+    background: radial-gradient(#cddc39, transparent);
+    height: 4px;
+    border: none;
+}
