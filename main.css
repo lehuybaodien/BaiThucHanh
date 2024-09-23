@@ -316,6 +316,16 @@ span {
     gap: 15px;
 }
 
+@media only screen and (max-width: 760px){
+    #gioithieu
+    {
+        grid-template-areas: 
+        "content" 
+        "aside-right";
+        grid-template-columns: 1fr;
+    }
+}
+
 .content {
     grid-area: content;
 }
