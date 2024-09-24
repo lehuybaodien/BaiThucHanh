@@ -316,6 +316,15 @@ span {
     gap: 15px;
 }
 
+@media only screen and (max-width: 760px) {
+    #gioithieu {
+        grid-template-areas: 
+        "content"
+        "aside-right";
+        grid-template-columns: 1fr;
+    }
+}
+
 .content {
     grid-area: content;
 }
@@ -362,6 +371,15 @@ span {
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 760px){
+    #tintuc
+    {
+        grid-template-areas: 
+        "noidung" 
+        "aside-left" ;
+        grid-template-columns: 1fr; 
+    }
+} 
 /*Dang nhap*/
 .login, .sign-up, .lienhe {
     margin-top: 50px;
@@ -394,4 +412,8 @@ hr {
     background: radial-gradient(#cddc39, transparent);
     height: 4px;
     border: none;
+}
+
+.input-box {
+    padding: 4px 0 1px 0;
 }
